@@ -15,7 +15,7 @@ export default function AdminDashboard() {
       return;
     }
 
-    const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
+   const API_URL = import.meta.env.VITE_API_URL;
 
     fetch(`${API_URL}/api/admin/stats`, {
       headers: {
@@ -49,7 +49,7 @@ export default function AdminDashboard() {
 
     try {
       const token = localStorage.getItem("token");
-      const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
+      const API_URL = import.meta.env.VITE_API_URL;
 
       const res = await fetch(`${API_URL}/api/admin/${type}/${id}`, {
         method: "DELETE",

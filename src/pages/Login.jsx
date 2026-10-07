@@ -12,7 +12,7 @@ export default function Login() {
     e.preventDefault();
     setLoading(true);
 
-    const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
+const API_URL = import.meta.env.VITE_API_URL;
     const endpoint = isLoginMode ? "/api/auth/login" : "/api/auth/register";
 
     try {

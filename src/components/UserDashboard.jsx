@@ -13,7 +13,7 @@ export default function UserDashboard() {
       return;
     }
 
-    const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
+const API_URL = import.meta.env.VITE_API_URL;
 
     fetch(`${API_URL}/api/user/dashboard`, {
       headers: {

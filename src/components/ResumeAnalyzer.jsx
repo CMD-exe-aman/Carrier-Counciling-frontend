@@ -24,7 +24,7 @@ export default function ResumeAnalyzer() {
       setError(null);
       setOut(null);
       
-      const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
+     const API_URL = import.meta.env.VITE_API_URL;
 
       // Packages the file into FormData so the backend can read it
       const formData = new FormData();

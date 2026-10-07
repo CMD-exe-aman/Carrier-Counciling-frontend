@@ -34,7 +34,7 @@ export default function Payment() {
     }
 
     try {
-      const orderResponse = await fetch("http://localhost:8000/api/payment/create-order", {
+      const orderResponse = await fetch(`${import.meta.env.VITE_API_URL}/api/payment/create-order`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ amount: amount }), // ✅ Dynamically uses 999 or 1999
